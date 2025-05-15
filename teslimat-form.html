@@ -1,1129 +1,1061 @@
-   <main id="MainContent"
-            class="content-for-layout focus-none outline-none grow theme-template-page theme-template-suffix-teslimat_formu"
-            role="main" tabindex="-1">
-            <section id="shopify-section-template--24578686419235__main"
-                class="shopify-section section x-section x-section-page">
-                <link href="//sibellaatelier.com/cdn/shop/t/3/assets/page.css?v=79529000017675582851745684582"
-                    rel="stylesheet" type="text/css" media="all" />
+<main id="MainContent"
+    class="content-for-layout focus-none outline-none grow theme-template-page theme-template-suffix-teslimat_formu"
+    role="main" tabindex="-1">
+    <section id="shopify-section-template--24578686419235__main"
+        class="shopify-section section x-section x-section-page">
+        <link href="//sibellaatelier.com/cdn/shop/t/3/assets/page.css?v=79529000017675582851745684582" rel="stylesheet"
+            type="text/css" media="all" />
+    </section>
+    <section id="shopify-section-template--24578686419235__custom_liquid_YgM9qe"
+        class="shopify-section section section-custom-liquid x-section">
 
-                <style data-shopify>
-                    .bg-breadcrumb--template--24578686419235__main {
+        <style data-shopify>
+            .custom-liquid ul {
+                list-style: disc;
+            }
+        </style>
 
-                        background: #f2f2f2;
+        <div class="relative mx-auto pt-[28px] md:pt-[28px] pb-[28px] md:pb-[28px]">
+            <div class="custom-liquid  full-width">
+                <!DOCTYPE html>
+                <html lang="tr">
 
-                    }
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Teslimat Formu</title>
+                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+                        rel="stylesheet">
+                    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+                        rel="stylesheet">
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                    <style>
+                        body {
+                            font-family: 'Poppins', sans-serif;
+                            background-color: #ffffff;
+                            /* Beyaz arka plan */
+                        }
 
-                    .breadcrumb__divider,
-                    .bg-breadcrumb--template--24578686419235__main,
-                    .bg-breadcrumb--template--24578686419235__main .before-link::before,
-                    .bg-breadcrumb--template--24578686419235__main .nav-link:before {}
+                        .delivery-form-container {
+                            background-color: #ffffff;
+                            padding: 30px;
+                            border-radius: 12px;
+                            /* Daha yuvarlak köşeler */
+                            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                            /* Daha yumuşak gölge */
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                        }
 
-                    .dark .bg-breadcrumb--template--24578686419235__main {
+                        .form-header h2 {
+                            color: #FF7F50;
+                            /* Somon rengi */
+                            margin-bottom: 25px;
+                            font-weight: 600;
+                        }
 
-                        background: #313131;
+                        .form-label {
+                            color: #333;
+                            font-weight: 500;
+                            margin-bottom: 0.3rem;
+                        }
 
-                    }
+                        .form-control,
+                        .form-select {
+                            border-radius: 8px;
+                            /* Daha yuvarlak inputlar */
+                            border: 1px solid #ced4da;
+                            padding: 0.5rem 0.75rem;
+                            /* İç boşluk ayarı */
+                        }
 
-                    .dark .breadcrumb__divider,
-                    .dark .bg-breadcrumb--template--24578686419235__main,
-                    .dark .bg-breadcrumb--template--24578686419235__main .before-link::before,
-                    .dark .bg-breadcrumb--template--24578686419235__main .nav-link::before {
-                        --colors-text: transparent;
+                        .form-control:focus,
+                        .form-select:focus {
+                            border-color: #FFA07A;
+                            /* Açık somon focus rengi */
+                            box-shadow: 0 0 0 0.2rem rgba(255, 127, 80, 0.25);
+                        }
 
+                        .btn-salmon {
+                            background-color: #FF7F50;
+                            border-color: #FF7F50;
+                            color: white;
+                            padding: 0.5rem 1rem;
+                            /* Buton iç boşluğu */
+                            border-radius: 8px;
+                            /* Daha yuvarlak butonlar */
+                            transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+                        }
 
-                        --colors-text-link: 194, 162, 122;
+                        .btn-salmon:hover {
+                            background-color: #E57373;
+                            /* Biraz daha koyu somon hover */
+                            border-color: #E57373;
+                            color: white;
+                        }
 
-                    }
-                </style>
+                        .table thead th {
+                            background-color: #FFF0E5;
+                            /* Çok açık somon - başlık için */
+                            color: #444;
+                            /* Koyu gri yazı */
+                            font-weight: 600;
+                            border-bottom-width: 1px;
+                            /* Başlık altı çizgi */
+                            text-align: center;
+                            /* Başlıkları ortala */
+                            vertical-align: middle;
+                        }
 
+                        .table tbody td {
+                            vertical-align: middle;
+                            /* Hücre içeriğini dikeyde ortala */
+                            text-align: center;
+                            /* Hücre içeriğini yatayda ortala */
+                        }
+
+                        .table tbody td input[type="number"] {
+                            max-width: 80px;
+                            /* Adet ve fiyat input genişliği */
+                            margin: auto;
+                            /* Inputları hücre içinde ortala */
+                        }
+
+                        .icon-btn {
+                            background: none;
+                            border: none;
+                            color: #FF7F50;
+                            cursor: pointer;
+                            font-size: 1.3rem;
+                            /* İkon boyutu */
+                            padding: 8px;
+                            border-radius: 50%;
+                            /* Yuvarlak ikon buton */
+                            transition: color 0.2s ease, background-color 0.2s ease;
+                        }
+
+                        .icon-btn:hover {
+                            color: #E57373;
+                            background-color: #FFF0E5;
+                            /* Hafif hover arka planı */
+                        }
+
+                        .modal-header {
+                            background-color: #FF7F50;
+                            color: white;
+                            border-top-left-radius: 8px;
+                            /* Modal köşe yuvarlaklığı */
+                            border-top-right-radius: 8px;
+                        }
+
+                        .modal-header .btn-close {
+                            filter: brightness(0) invert(1);
+                        }
+
+                        #productSearchInput {
+                            margin-bottom: 15px;
+                            border-radius: 8px;
+                        }
+
+                        .product-select-item {
+                            display: flex;
+                            align-items: center;
+                            padding: 12px 10px;
+                            /* İç boşluk */
+                            border-bottom: 1px solid #eee;
+                            cursor: pointer;
+                            border-radius: 6px;
+                            /* Liste elemanı yuvarlaklığı */
+                            margin-bottom: 5px;
+                            /* Elemanlar arası boşluk */
+                            transition: background-color 0.2s ease;
+                        }
+
+                        .product-select-item:hover,
+                        .product-select-item.selected {
+                            background-color: #FFF0E5;
+                            /* Seçili/Hover arka planı */
+                        }
+
+                        .product-select-item img {
+                            width: 50px;
+                            height: 50px;
+                            margin-right: 15px;
+                            object-fit: cover;
+                            border-radius: 6px;
+                            /* Resim yuvarlaklığı */
+                            border: 1px solid #ddd;
+                        }
+
+                        .product-select-item-info strong {
+                            display: block;
+                            color: #333;
+                        }
+
+                        .product-select-item-info small {
+                            color: #777;
+                        }
+
+                        .totals-summary p {
+                            font-size: 1.1rem;
+                            /* Toplamlar yazı boyutu */
+                            margin-bottom: 0.25rem;
+                        }
+
+                        .totals-summary label {
+                            font-weight: 400;
+                            color: #555;
+                        }
+
+                        /* Mobil cihazlar için tablo düzenlemesi */
+                        @media (max-width: 768px) {
+                            .table thead {
+                                display: none;
+                                /* Başlıkları gizle */
+                            }
+
+                            .table,
+                            .table tbody,
+                            .table tr,
+                            .table td {
+                                display: block;
+                                /* Her şeyi blok yap */
+                                width: 100%;
+                            }
+
+                            .table tr {
+                                margin-bottom: 15px;
+                                border: 1px solid #ddd;
+                                border-radius: 8px;
+                                padding: 10px;
+                            }
+
+                            .table td {
+                                text-align: right;
+                                /* Veriyi sağa yasla */
+                                padding-left: 80%;
+                                /* Etiket için yer bırak */
+                                min-height: 60px;
+                                position: relative;
+                                border-bottom: 1px dotted #eee;
+                                /* Hücreler arası ayraç */
+                            }
+
+                            .table td:last-child {
+                                border-bottom: none;
+                            }
+
+                            .table td::before {
+                                content: attr(data-label);
+                                /* data-label'dan etiketi al */
+                                position: absolute;
+                                left: 10px;
+                                width: 10px;
+                                /* Etiket genişliği */
+                                padding-right: 10px;
+                                font-weight: bold;
+                                text-align: left;
+                                white-space: nowrap;
+                            }
+
+                            .table td input[type="number"] {
+                                width: 100%;
+                                max-width: 140px;
+                                box-sizing: border-box;
+                                float: right;
+                            }
+
+                            .table td img {
+                                max-width: 60px !important;
+                                /* Mobil için resim boyutu */
+                                height: auto !important;
+                                float: right;
+                                /* Mobil için resmi sağa yasla */
+                            }
+                        }
+                    </style>
+                </head>
+
+                <body>
+
+                    <div class="container my-4 delivery-form-container">
+                        <div class="form-header text-center">
+                            <h2>Teslimat Formu</h2>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-3 col-sm-6 mb-3">
+                                <label for="deliveryNo" class="form-label">Teslimat No</label>
+                                <input type="text" class="form-control" id="deliveryNo" readonly>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-3">
+                                <label for="deliveryDate" class="form-label">Teslim Tarihi</label>
+                                <input type="date" class="form-control" id="deliveryDate">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="deliveryCompany" class="form-label">Teslim Edilen Firma</label>
+                                <select class="form-select" id="deliveryCompany">
+                                    <option selected disabled value="">Firma Seçiniz...</option>
+                                    <option value="Desing_Market_Nisantasi">Desing Market Nisantasi</option>
+                                    <option value="Desing_Market_Karakoy">Desing Market Karakoy</option>
+                                    <option value="Modul_Istanbul">Modul Istanbul</option>
+                                    <option value="Leyla_Dukkan">Leyla Dukkan</option>
+                                    <option value="OnlineSatis">Online Satış</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="row mb-4 align-items-center totals-summary">
+                            <div class="col-md-3 col-6">
+                                <label class="form-label">Toplam Adet:</label>
+                                <p id="totalQuantity" class="fw-bold fs-5">0</p>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <label class="form-label">Toplam Tutar:</label>
+                                <p id="totalAmount" class="fw-bold fs-5">0.00</p>
+                            </div>
+                            <div class="col-md-6 text-md-end text-center mt-3 mt-md-0">
+                                <button class="icon-btn" id="exportExcelBtn" title="Excel'e Aktar"><i
+                                        class="fas fa-file-excel"></i></button>
+                                <button class="icon-btn" id="exportPdfBtn" title="PDF'e Aktar"><i
+                                        class="fas fa-file-pdf"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover" id="deliveryProductsTable">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 100px;">Görsel</th>
+                                        <th>Ürün Kodu</th>
+                                        <th>Ürün Adı</th>
+                                        <th style="width: 180px;">Birim Fiyat (₺)</th>
+                                        <th style="width: 80px;">Adet</th>
+                                        <th style="width: 180px;">Toplam Tutar (₺)</th>
+                                        <th style="width: 80px;">İşlem</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="text-end mt-3">
+                            <button class="btn btn-salmon px-4" id="addProductBtn"><i class="fas fa-plus me-2"></i> Ürün
+                                Ekle</button>
                         </div>
                     </div>
-                </div>
 
-
-
-
-
-
-                <div class="pt-[20px] md:pt-[28px] pb-[20px] md:pb-[28px] ltr">
-                    <div class="page__container">
-
-                        <style data-shopify>
-                            .page__container .heading--template--24578686419235__main {
-                                font-size: 2.295rem;
-                            }
-
-                            @media screen and (min-width: 1025px) {
-                                .page__container .heading--template--24578686419235__main {
-                                    font-size: 3.825rem;
-                                }
-                            }
-                        </style>
-                        <h1 class="page__title h2 mb-4 md:mb-6 heading--template--24578686419235__main">
-                            Teslimat Formu
-                        </h1>
-
-
+                    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addProductModalLabel">Ürün Seç ve Ekle</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Kapat"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" class="form-control" id="productSearchInput"
+                                        placeholder="Ürün Adı veya SKU ile Ara...">
+                                    <div id="productListContainer"
+                                        style="max-height: 140px; overflow-y: auto; margin-top:15px;">
+                                        <p class="text-center p-3" id="loadingProducts">Ürünler yükleniyor...
+                                        </p>
+                                    </div>
+                                    <hr class="my-3">
+                                    <h6>Seçilen Ürün Detayları</h6>
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2 text-center mb-3 mb-md-0">
+                                            <img src="https://placehold.co/100x100/FFE4E1/FF7F50?text=Görsel"
+                                                id="selectedProductImageModal" alt="Ürün Görseli"
+                                                class="img-fluid rounded"
+                                                style="max-height:80px; width:auto; border:1px solid #ddd;">
+                                        </div>
+                                        <div class="col-md-10">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="modalProductSKU" class="form-label">Ürün
+                                                        Kodu</label>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        id="modalProductSKU" readonly>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="modalProductName" class="form-label">Ürün
+                                                        Adı</label>
+                                                    <input type="text" class="form-control form-control-sm"
+                                                        id="modalProductName" readonly>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="modalProductPrice" class="form-label">Birim
+                                                        Fiyat (₺)</label>
+                                                    <input type="number" class="form-control form-control-sm"
+                                                        id="modalProductPrice" step="0.01" min="0">
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <label for="modalProductQuantity" class="form-label">Adet</label>
+                                                    <input type="number" class="form-control form-control-sm"
+                                                        id="modalProductQuantity" value="1" min="1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">İptal</button>
+                                    <button type="button" class="btn btn-salmon" id="confirmAddProductBtn"><i
+                                            class="fas fa-check me-2"></i>Tamam</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-
-
-            </section>
-            <section id="shopify-section-template--24578686419235__custom_liquid_YgM9qe"
-                class="shopify-section section section-custom-liquid x-section">
-
-                <style data-shopify>
-                    .custom-liquid ul {
-                        list-style: disc;
-                    }
-                </style>
-
-                <div class="relative mx-auto pt-[28px] md:pt-[28px] pb-[28px] md:pb-[28px]">
-                    <div class="custom-liquid  full-width">
-                        <!DOCTYPE html>
-                        <html lang="tr">
-
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <title>Teslimat Formu</title>
-                            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-                                rel="stylesheet">
-                            <link
-                                href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-                                rel="stylesheet">
-                            <link rel="stylesheet"
-                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-                            <style>
-                                body {
-                                    font-family: 'Poppins', sans-serif;
-                                    background-color: #ffffff;
-                                    /* Beyaz arka plan */
-                                }
-
-                                .delivery-form-container {
-                                    background-color: #ffffff;
-                                    padding: 30px;
-                                    border-radius: 12px;
-                                    /* Daha yuvarlak köşeler */
-                                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-                                    /* Daha yumuşak gölge */
-                                    margin-top: 20px;
-                                    margin-bottom: 20px;
-                                }
-
-                                .form-header h2 {
-                                    color: #FF7F50;
-                                    /* Somon rengi */
-                                    margin-bottom: 25px;
-                                    font-weight: 600;
-                                }
-
-                                .form-label {
-                                    color: #333;
-                                    font-weight: 500;
-                                    margin-bottom: 0.3rem;
-                                }
-
-                                .form-control,
-                                .form-select {
-                                    border-radius: 8px;
-                                    /* Daha yuvarlak inputlar */
-                                    border: 1px solid #ced4da;
-                                    padding: 0.5rem 0.75rem;
-                                    /* İç boşluk ayarı */
-                                }
-
-                                .form-control:focus,
-                                .form-select:focus {
-                                    border-color: #FFA07A;
-                                    /* Açık somon focus rengi */
-                                    box-shadow: 0 0 0 0.2rem rgba(255, 127, 80, 0.25);
-                                }
-
-                                .btn-salmon {
-                                    background-color: #FF7F50;
-                                    border-color: #FF7F50;
-                                    color: white;
-                                    padding: 0.5rem 1rem;
-                                    /* Buton iç boşluğu */
-                                    border-radius: 8px;
-                                    /* Daha yuvarlak butonlar */
-                                    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-                                }
-
-                                .btn-salmon:hover {
-                                    background-color: #E57373;
-                                    /* Biraz daha koyu somon hover */
-                                    border-color: #E57373;
-                                    color: white;
-                                }
-
-                                .table thead th {
-                                    background-color: #FFF0E5;
-                                    /* Çok açık somon - başlık için */
-                                    color: #444;
-                                    /* Koyu gri yazı */
-                                    font-weight: 600;
-                                    border-bottom-width: 1px;
-                                    /* Başlık altı çizgi */
-                                    text-align: center;
-                                    /* Başlıkları ortala */
-                                    vertical-align: middle;
-                                }
-
-                                .table tbody td {
-                                    vertical-align: middle;
-                                    /* Hücre içeriğini dikeyde ortala */
-                                    text-align: center;
-                                    /* Hücre içeriğini yatayda ortala */
-                                }
-
-                                .table tbody td input[type="number"] {
-                                    max-width: 80px;
-                                    /* Adet ve fiyat input genişliği */
-                                    margin: auto;
-                                    /* Inputları hücre içinde ortala */
-                                }
-
-                                .icon-btn {
-                                    background: none;
-                                    border: none;
-                                    color: #FF7F50;
-                                    cursor: pointer;
-                                    font-size: 1.3rem;
-                                    /* İkon boyutu */
-                                    padding: 8px;
-                                    border-radius: 50%;
-                                    /* Yuvarlak ikon buton */
-                                    transition: color 0.2s ease, background-color 0.2s ease;
-                                }
-
-                                .icon-btn:hover {
-                                    color: #E57373;
-                                    background-color: #FFF0E5;
-                                    /* Hafif hover arka planı */
-                                }
-
-                                .modal-header {
-                                    background-color: #FF7F50;
-                                    color: white;
-                                    border-top-left-radius: 8px;
-                                    /* Modal köşe yuvarlaklığı */
-                                    border-top-right-radius: 8px;
-                                }
-
-                                .modal-header .btn-close {
-                                    filter: brightness(0) invert(1);
-                                }
-
-                                #productSearchInput {
-                                    margin-bottom: 15px;
-                                    border-radius: 8px;
-                                }
-
-                                .product-select-item {
-                                    display: flex;
-                                    align-items: center;
-                                    padding: 12px 10px;
-                                    /* İç boşluk */
-                                    border-bottom: 1px solid #eee;
-                                    cursor: pointer;
-                                    border-radius: 6px;
-                                    /* Liste elemanı yuvarlaklığı */
-                                    margin-bottom: 5px;
-                                    /* Elemanlar arası boşluk */
-                                    transition: background-color 0.2s ease;
-                                }
-
-                                .product-select-item:hover,
-                                .product-select-item.selected {
-                                    background-color: #FFF0E5;
-                                    /* Seçili/Hover arka planı */
-                                }
-
-                                .product-select-item img {
-                                    width: 50px;
-                                    height: 50px;
-                                    margin-right: 15px;
-                                    object-fit: cover;
-                                    border-radius: 6px;
-                                    /* Resim yuvarlaklığı */
-                                    border: 1px solid #ddd;
-                                }
-
-                                .product-select-item-info strong {
-                                    display: block;
-                                    color: #333;
-                                }
-
-                                .product-select-item-info small {
-                                    color: #777;
-                                }
-
-                                .totals-summary p {
-                                    font-size: 1.1rem;
-                                    /* Toplamlar yazı boyutu */
-                                    margin-bottom: 0.25rem;
-                                }
-
-                                .totals-summary label {
-                                    font-weight: 400;
-                                    color: #555;
-                                }
-
-                                /* Mobil cihazlar için tablo düzenlemesi */
-                                @media (max-width: 768px) {
-                                    .table thead {
-                                        display: none;
-                                        /* Başlıkları gizle */
-                                    }
-
-                                    .table,
-                                    .table tbody,
-                                    .table tr,
-                                    .table td {
-                                        display: block;
-                                        /* Her şeyi blok yap */
-                                        width: 100%;
-                                    }
-
-                                    .table tr {
-                                        margin-bottom: 15px;
-                                        border: 1px solid #ddd;
-                                        border-radius: 8px;
-                                        padding: 10px;
-                                    }
-
-                                    .table td {
-                                        text-align: right;
-                                        /* Veriyi sağa yasla */
-                                        padding-left: 80%;
-                                        /* Etiket için yer bırak */
-                                        min-height: 60px;
-                                        position: relative;
-                                        border-bottom: 1px dotted #eee;
-                                        /* Hücreler arası ayraç */
-                                    }
-
-                                    .table td:last-child {
-                                        border-bottom: none;
-                                    }
-
-                                    .table td::before {
-                                        content: attr(data-label);
-                                        /* data-label'dan etiketi al */
-                                        position: absolute;
-                                        left: 10px;
-                                        width: 10px;
-                                        /* Etiket genişliği */
-                                        padding-right: 10px;
-                                        font-weight: bold;
-                                        text-align: left;
-                                        white-space: nowrap;
-                                    }
-
-                                    .table td input[type="number"] {
-                                        width: 100%;
-                                        max-width: 140px;
-                                        box-sizing: border-box;
-                                        float: right;
-                                    }
-
-                                    .table td img {
-                                        max-width: 60px !important;
-                                        /* Mobil için resim boyutu */
-                                        height: auto !important;
-                                        float: right;
-                                        /* Mobil için resmi sağa yasla */
-                                    }
-                                }
-                            </style>
-                        </head>
-
-                        <body>
-
-                            <div class="container my-4 delivery-form-container">
-                                <div class="form-header text-center">
-                                    <h2>Teslimat Formu</h2>
+                    <div class="modal fade" id="excelFormatModal" tabindex="-1" aria-labelledby="excelFormatModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="excelFormatModalLabel">Excel Formatı</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Kapat"></button>
                                 </div>
-
-                                <div class="row mb-4">
-                                    <div class="col-md-3 col-sm-6 mb-3">
-                                        <label for="deliveryNo" class="form-label">Teslimat No</label>
-                                        <input type="text" class="form-control" id="deliveryNo" readonly>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6 mb-3">
-                                        <label for="deliveryDate" class="form-label">Teslim Tarihi</label>
-                                        <input type="date" class="form-control" id="deliveryDate">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="deliveryCompany" class="form-label">Teslim Edilen Firma</label>
-                                        <select class="form-select" id="deliveryCompany">
-                                            <option selected disabled value="">Firma Seçiniz...</option>
-                                            <option value="Desing_Market_Nisantasi">Desing Market Nisantasi</option>
-                                            <option value="Desing_Market_Karakoy">Desing Market Karakoy</option>
-                                            <option value="Modul_Istanbul">Modul Istanbul</option>
-                                            <option value="Leyla_Dukkan">Leyla Dukkan</option>
-                                            <option value="OnlineSatis">Online Satış</option>
-                                        </select>
-
-                                    </div>
+                                <div class="modal-body">
+                                    <label for="excelFormatSelect" class="form-label">Format Seçiniz:</label>
+                                    <select class="form-select" id="excelFormatSelect">
+                                        <option value="general">Genel Format</option>
+                                        <option value="design_market">Design Market</option>
+                                        <option value="modul_istanbul">Modül İstanbul</option>
+                                    </select>
                                 </div>
-                                <div class="row mb-4 align-items-center totals-summary">
-                                    <div class="col-md-3 col-6">
-                                        <label class="form-label">Toplam Adet:</label>
-                                        <p id="totalQuantity" class="fw-bold fs-5">0</p>
-                                    </div>
-                                    <div class="col-md-3 col-6">
-                                        <label class="form-label">Toplam Tutar:</label>
-                                        <p id="totalAmount" class="fw-bold fs-5">0.00</p>
-                                    </div>
-                                    <div class="col-md-6 text-md-end text-center mt-3 mt-md-0">
-                                        <button class="icon-btn" id="exportExcelBtn" title="Excel'e Aktar"><i
-                                                class="fas fa-file-excel"></i></button>
-                                        <button class="icon-btn" id="exportPdfBtn" title="PDF'e Aktar"><i
-                                                class="fas fa-file-pdf"></i></button>
-                                    </div>
-                                </div>
-
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-hover" id="deliveryProductsTable">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 100px;">Görsel</th>
-                                                <th>Ürün Kodu</th>
-                                                <th>Ürün Adı</th>
-                                                <th style="width: 180px;">Birim Fiyat (₺)</th>
-                                                <th style="width: 80px;">Adet</th>
-                                                <th style="width: 180px;">Toplam Tutar (₺)</th>
-                                                <th style="width: 80px;">İşlem</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div class="text-end mt-3">
-                                    <button class="btn btn-salmon px-4" id="addProductBtn"><i
-                                            class="fas fa-plus me-2"></i> Ürün Ekle</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">İptal</button>
+                                    <button type="button" class="btn btn-salmon"
+                                        id="confirmExcelExportBtn">Aktar</button>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="modal fade" id="addProductModal" tabindex="-1"
-                                aria-labelledby="addProductModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg modal-dialog-scrollable">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="addProductModalLabel">Ürün Seç ve Ekle</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Kapat"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <input type="text" class="form-control" id="productSearchInput"
-                                                placeholder="Ürün Adı veya SKU ile Ara...">
-                                            <div id="productListContainer"
-                                                style="max-height: 140px; overflow-y: auto; margin-top:15px;">
-                                                <p class="text-center p-3" id="loadingProducts">Ürünler yükleniyor...
-                                                </p>
-                                            </div>
-                                            <hr class="my-3">
-                                            <h6>Seçilen Ürün Detayları</h6>
-                                            <div class="row align-items-center">
-                                                <div class="col-md-2 text-center mb-3 mb-md-0">
-                                                    <img src="https://placehold.co/100x100/FFE4E1/FF7F50?text=Görsel"
-                                                        id="selectedProductImageModal" alt="Ürün Görseli"
-                                                        class="img-fluid rounded"
-                                                        style="max-height:80px; width:auto; border:1px solid #ddd;">
-                                                </div>
-                                                <div class="col-md-10">
-                                                    <div class="row">
-                                                        <div class="col-md-6 mb-2">
-                                                            <label for="modalProductSKU" class="form-label">Ürün
-                                                                Kodu</label>
-                                                            <input type="text" class="form-control form-control-sm"
-                                                                id="modalProductSKU" readonly>
-                                                        </div>
-                                                        <div class="col-md-6 mb-2">
-                                                            <label for="modalProductName" class="form-label">Ürün
-                                                                Adı</label>
-                                                            <input type="text" class="form-control form-control-sm"
-                                                                id="modalProductName" readonly>
-                                                        </div>
-                                                        <div class="col-md-6 mb-2">
-                                                            <label for="modalProductPrice" class="form-label">Birim
-                                                                Fiyat (₺)</label>
-                                                            <input type="number" class="form-control form-control-sm"
-                                                                id="modalProductPrice" step="0.01" min="0">
-                                                        </div>
-                                                        <div class="col-md-6 mb-2">
-                                                            <label for="modalProductQuantity"
-                                                                class="form-label">Adet</label>
-                                                            <input type="number" class="form-control form-control-sm"
-                                                                id="modalProductQuantity" value="1" min="1">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">İptal</button>
-                                            <button type="button" class="btn btn-salmon" id="confirmAddProductBtn"><i
-                                                    class="fas fa-check me-2"></i>Tamam</button>
-                                        </div>
-                                    </div>
+                    <div class="modal fade" id="pdfFormatModal" tabindex="-1" aria-labelledby="pdfFormatModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="pdfFormatModalLabel">PDF Formatı</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Kapat"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <label for="pdfFormatSelect" class="form-label">Format Seçiniz:</label>
+                                    <select class="form-select" id="pdfFormatSelect">
+                                        <option value="general">Genel Format</option>
+                                        <option value="design_market">Design Market</option>
+                                        <option value="modul_istanbul">Modül İstanbul</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">İptal</button>
+                                    <button type="button" class="btn btn-salmon" id="confirmPdfExportBtn">Aktar</button>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="modal fade" id="excelFormatModal" tabindex="-1"
-                                aria-labelledby="excelFormatModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="excelFormatModalLabel">Excel Formatı</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Kapat"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <label for="excelFormatSelect" class="form-label">Format Seçiniz:</label>
-                                            <select class="form-select" id="excelFormatSelect">
-                                                <option value="general">Genel Format</option>
-                                                <option value="design_market">Design Market</option>
-                                                <option value="modul_istanbul">Modül İstanbul</option>
-                                            </select>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">İptal</button>
-                                            <button type="button" class="btn btn-salmon"
-                                                id="confirmExcelExportBtn">Aktar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+                    <script
+                        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
-                            <div class="modal fade" id="pdfFormatModal" tabindex="-1"
-                                aria-labelledby="pdfFormatModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="pdfFormatModalLabel">PDF Formatı</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Kapat"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <label for="pdfFormatSelect" class="form-label">Format Seçiniz:</label>
-                                            <select class="form-select" id="pdfFormatSelect">
-                                                <option value="general">Genel Format</option>
-                                                <option value="design_market">Design Market</option>
-                                                <option value="modul_istanbul">Modül İstanbul</option>
-                                            </select>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">İptal</button>
-                                            <button type="button" class="btn btn-salmon"
-                                                id="confirmPdfExportBtn">Aktar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            // --- Genel Bilgiler ---
+                            const deliveryNoInput = document.getElementById("deliveryNo");
+                            const deliveryDateInput = document.getElementById("deliveryDate");
+                            const totalQuantityDisplay = document.getElementById("totalQuantity");
+                            const totalAmountDisplay = document.getElementById("totalAmount");
 
-                            <script
-                                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-                            <script
-                                src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+                            // Teslimat No Oluşturma (Shopify Metafields veya backend'den alınması daha iyi olur)
+                            let lastDeliveryNumber =
+                                parseInt(localStorage.getItem("lastDeliveryNumber_TF")) || 0;
+                            function generateDeliveryNo() {
+                                lastDeliveryNumber++;
+                                localStorage.setItem("lastDeliveryNumber_TF", lastDeliveryNumber);
+                                return "TF" + String(lastDeliveryNumber).padStart(4, "0");
+                            }
+                            deliveryNoInput.value = generateDeliveryNo();
 
-                            <script>
-                                document.addEventListener("DOMContentLoaded", function () {
-                                    // --- Genel Bilgiler ---
-                                    const deliveryNoInput = document.getElementById("deliveryNo");
-                                    const deliveryDateInput = document.getElementById("deliveryDate");
-                                    const totalQuantityDisplay = document.getElementById("totalQuantity");
-                                    const totalAmountDisplay = document.getElementById("totalAmount");
+                            // Teslim Tarihi (Günün Tarihi)
+                            const today = new Date();
+                            const year = today.getFullYear();
+                            const month = String(today.getMonth() + 1).padStart(2, "0");
+                            const day = String(today.getDate()).padStart(2, "0");
+                            deliveryDateInput.value = `${year}-${month}-${day}`;
 
-                                    // Teslimat No Oluşturma (Shopify Metafields veya backend'den alınması daha iyi olur)
-                                    let lastDeliveryNumber =
-                                        parseInt(localStorage.getItem("lastDeliveryNumber_TF")) || 0;
-                                    function generateDeliveryNo() {
-                                        lastDeliveryNumber++;
-                                        localStorage.setItem("lastDeliveryNumber_TF", lastDeliveryNumber);
-                                        return "TF" + String(lastDeliveryNumber).padStart(4, "0");
-                                    }
-                                    deliveryNoInput.value = generateDeliveryNo();
+                            // --- Ürün Tablosu ve İşlemleri ---
+                            const productsTableBody = document.querySelector(
+                                "#deliveryProductsTable tbody"
+                            );
+                            const addProductBtn = document.getElementById("addProductBtn");
+                            const addProductModalElement = document.getElementById("addProductModal");
+                            const addProductModal = new bootstrap.Modal(addProductModalElement);
+                            const productSearchInput = document.getElementById("productSearchInput");
+                            const productListContainer = document.getElementById("productListContainer");
+                            const confirmAddProductBtn = document.getElementById("confirmAddProductBtn");
+                            const loadingProductsP = document.getElementById("loadingProducts");
 
-                                    // Teslim Tarihi (Günün Tarihi)
-                                    const today = new Date();
-                                    const year = today.getFullYear();
-                                    const month = String(today.getMonth() + 1).padStart(2, "0");
-                                    const day = String(today.getDate()).padStart(2, "0");
-                                    deliveryDateInput.value = `${year}-${month}-${day}`;
+                            const modalProductImage = document.getElementById(
+                                "selectedProductImageModal"
+                            );
+                            const modalProductSKU = document.getElementById("modalProductSKU");
+                            const modalProductName = document.getElementById("modalProductName");
+                            const modalProductPrice = document.getElementById("modalProductPrice");
+                            const modalProductQuantity = document.getElementById("modalProductQuantity");
 
-                                    // --- Ürün Tablosu ve İşlemleri ---
-                                    const productsTableBody = document.querySelector(
-                                        "#deliveryProductsTable tbody"
-                                    );
-                                    const addProductBtn = document.getElementById("addProductBtn");
-                                    const addProductModalElement = document.getElementById("addProductModal");
-                                    const addProductModal = new bootstrap.Modal(addProductModalElement);
-                                    const productSearchInput = document.getElementById("productSearchInput");
-                                    const productListContainer = document.getElementById("productListContainer");
-                                    const confirmAddProductBtn = document.getElementById("confirmAddProductBtn");
-                                    const loadingProductsP = document.getElementById("loadingProducts");
+                            let allProducts = []; // Tüm ürünleri tutacak dizi
+                            let selectedProductForModal = null; // Modal içinde seçili olan ürün verisi
 
-                                    const modalProductImage = document.getElementById(
-                                        "selectedProductImageModal"
-                                    );
-                                    const modalProductSKU = document.getElementById("modalProductSKU");
-                                    const modalProductName = document.getElementById("modalProductName");
-                                    const modalProductPrice = document.getElementById("modalProductPrice");
-                                    const modalProductQuantity = document.getElementById("modalProductQuantity");
+                            // Shopify'dan AJAX ile ürünleri çekme (tüm ürünler için sayfalama ile)
+                            async function fetchAllShopifyProducts() {
+                                let products = [];
+                                let nextPageInfo =
+                                    "/products.json?limit=250&fields=id,title,variants,images"; // İlk sayfa, sadece gerekli alanları çek
+                                loadingProductsP.textContent = "Ürünler yükleniyor, lütfen bekleyin...";
+                                loadingProductsP.style.display = "block";
+                                productListContainer.innerHTML = ""; // Önceki listeyi temizle
 
-                                    let allProducts = []; // Tüm ürünleri tutacak dizi
-                                    let selectedProductForModal = null; // Modal içinde seçili olan ürün verisi
+                                try {
+                                    while (nextPageInfo) {
+                                        const response = await fetch(nextPageInfo);
+                                        if (!response.ok) {
+                                            throw new Error(`HTTP hatası! Durum: ${response.status}`);
+                                        }
+                                        const data = await response.json();
+                                        products = products.concat(data.products);
 
-                                    // Shopify'dan AJAX ile ürünleri çekme (tüm ürünler için sayfalama ile)
-                                    async function fetchAllShopifyProducts() {
-                                        let products = [];
-                                        let nextPageInfo =
-                                            "/products.json?limit=250&fields=id,title,variants,images"; // İlk sayfa, sadece gerekli alanları çek
-                                        loadingProductsP.textContent = "Ürünler yükleniyor, lütfen bekleyin...";
-                                        loadingProductsP.style.display = "block";
-                                        productListContainer.innerHTML = ""; // Önceki listeyi temizle
-
-                                        try {
-                                            while (nextPageInfo) {
-                                                const response = await fetch(nextPageInfo);
-                                                if (!response.ok) {
-                                                    throw new Error(`HTTP hatası! Durum: ${response.status}`);
-                                                }
-                                                const data = await response.json();
-                                                products = products.concat(data.products);
-
-                                                const linkHeader = response.headers.get("Link");
-                                                if (linkHeader) {
-                                                    const match = linkHeader.match(/<([^>]+)>;\s*rel="next"/);
-                                                    nextPageInfo = match
-                                                        ? match[1].replace(window.location.origin, "")
-                                                        : null; // Tam URL yerine path al
-                                                } else {
-                                                    nextPageInfo = null;
-                                                }
-                                            }
-                                            allProducts = products;
-                                            if (allProducts.length === 0) {
-                                                loadingProductsP.textContent =
-                                                    "Mağazada hiç ürün bulunamadı veya ürünler yüklenemedi.";
-                                            } else {
-                                                loadingProductsP.style.display = "none";
-                                            }
-                                            renderProductList(allProducts);
-                                        } catch (error) {
-                                            console.error("Ürünler yüklenirken hata oluştu:", error);
-                                            loadingProductsP.textContent =
-                                                "Ürünler yüklenemedi. Lütfen internet bağlantınızı kontrol edin veya daha sonra tekrar deneyin.";
-                                            loadingProductsP.classList.add("text-danger");
+                                        const linkHeader = response.headers.get("Link");
+                                        if (linkHeader) {
+                                            const match = linkHeader.match(/<([^>]+)>;\s*rel="next"/);
+                                            nextPageInfo = match
+                                                ? match[1].replace(window.location.origin, "")
+                                                : null; // Tam URL yerine path al
+                                        } else {
+                                            nextPageInfo = null;
                                         }
                                     }
+                                    allProducts = products;
+                                    if (allProducts.length === 0) {
+                                        loadingProductsP.textContent =
+                                            "Mağazada hiç ürün bulunamadı veya ürünler yüklenemedi.";
+                                    } else {
+                                        loadingProductsP.style.display = "none";
+                                    }
+                                    renderProductList(allProducts);
+                                } catch (error) {
+                                    console.error("Ürünler yüklenirken hata oluştu:", error);
+                                    loadingProductsP.textContent =
+                                        "Ürünler yüklenemedi. Lütfen internet bağlantınızı kontrol edin veya daha sonra tekrar deneyin.";
+                                    loadingProductsP.classList.add("text-danger");
+                                }
+                            }
 
-                                    function renderProductList(productsToRender) {
-                                        productListContainer.innerHTML = ""; // Önceki listeyi temizle
-                                        if (productsToRender.length === 0 && allProducts.length > 0) {
-                                            // Arama sonucu boşsa
-                                            productListContainer.innerHTML =
-                                                '<p class="text-center p-3">Aramanızla eşleşen ürün bulunamadı.</p>';
-                                            return;
-                                        }
-                                        if (
-                                            productsToRender.length === 0 &&
-                                            allProducts.length === 0 &&
-                                            loadingProductsP.style.display === "none"
-                                        ) {
-                                            // Hiç ürün yoksa
-                                            productListContainer.innerHTML =
-                                                '<p class="text-center p-3">Mağazada ürün bulunmamaktadır.</p>';
-                                            return;
-                                        }
+                            function renderProductList(productsToRender) {
+                                productListContainer.innerHTML = ""; // Önceki listeyi temizle
+                                if (productsToRender.length === 0 && allProducts.length > 0) {
+                                    // Arama sonucu boşsa
+                                    productListContainer.innerHTML =
+                                        '<p class="text-center p-3">Aramanızla eşleşen ürün bulunamadı.</p>';
+                                    return;
+                                }
+                                if (
+                                    productsToRender.length === 0 &&
+                                    allProducts.length === 0 &&
+                                    loadingProductsP.style.display === "none"
+                                ) {
+                                    // Hiç ürün yoksa
+                                    productListContainer.innerHTML =
+                                        '<p class="text-center p-3">Mağazada ürün bulunmamaktadır.</p>';
+                                    return;
+                                }
 
-                                        productsToRender.forEach((product) => {
-                                            const productDiv = document.createElement("div");
-                                            productDiv.classList.add("product-select-item");
-                                            productDiv.dataset.productId = product.id;
+                                productsToRender.forEach((product) => {
+                                    const productDiv = document.createElement("div");
+                                    productDiv.classList.add("product-select-item");
+                                    productDiv.dataset.productId = product.id;
 
-                                            const firstVariant =
-                                                product.variants && product.variants.length > 0
-                                                    ? product.variants[0]
-                                                    : { sku: "N/A", price: "0.00" };
-                                            // Shopify resim URL'lerinden _100x100 boyutunu kullanma
-                                            const imageUrl =
-                                                product.images && product.images.length > 0
-                                                    ? product.images[0].src.replace(/(\.[^.?]+)(\?.*)?$/, "_100x100$1$2")
-                                                    : `https://placehold.co/50x50/FFE4E1/FF7F50?text=${product.title.substring(
-                                                        0,
-                                                        1
-                                                    )}`;
+                                    const firstVariant =
+                                        product.variants && product.variants.length > 0
+                                            ? product.variants[0]
+                                            : { sku: "N/A", price: "0.00" };
+                                    // Shopify resim URL'lerinden _100x100 boyutunu kullanma
+                                    const imageUrl =
+                                        product.images && product.images.length > 0
+                                            ? product.images[0].src.replace(/(\.[^.?]+)(\?.*)?$/, "_100x100$1$2")
+                                            : `https://placehold.co/50x50/FFE4E1/FF7F50?text=${product.title.substring(
+                                                0,
+                                                1
+                                            )}`;
 
-                                            productDiv.innerHTML = `
+                                    productDiv.innerHTML = `
                 <img src="${imageUrl}" alt="${product.title
-                                                }" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFE4E1/FF7F50?text=Hata';">
+                                        }" onerror="this.onerror=null;this.src='https://placehold.co/50x50/FFE4E1/FF7F50?text=Hata';">
                 <div class="product-select-item-info">
                     <strong>${product.title}</strong>
                     <small>SKU: ${firstVariant.sku || "N/A"}</small>
                 </div>
             `;
-                                            productDiv.addEventListener("click", () => {
-                                                selectedProductForModal = product; // Tüm ürün objesini sakla
-                                                // Modal için _200x200 boyutunu kullanma
-                                                modalProductImage.src =
-                                                    product.images && product.images.length > 0
-                                                        ? product.images[0].src.replace(
-                                                            /(\.[^.?]+)(\?.*)?$/,
-                                                            "_200x200$1$2"
-                                                        )
-                                                        : `https://placehold.co/100x100/FFE4E1/FF7F50?text=${product.title.substring(
-                                                            0,
-                                                            1
-                                                        )}`;
-                                                modalProductSKU.value = firstVariant.sku || "N/A";
-                                                modalProductName.value = product.title;
-                                                modalProductPrice.value = parseFloat(firstVariant.price).toFixed(2);
-                                                modalProductQuantity.value = 1;
-
-                                                document
-                                                    .querySelectorAll(".product-select-item")
-                                                    .forEach((item) => item.classList.remove("selected", "bg-light"));
-                                                productDiv.classList.add("selected", "bg-light");
-                                            });
-                                            productListContainer.appendChild(productDiv);
-                                        });
-                                    }
-
-                                    productSearchInput.addEventListener("input", function () {
-                                        const searchTerm = this.value.toLowerCase().trim();
-                                        if (!allProducts || allProducts.length === 0) return;
-
-                                        const filteredProducts = allProducts.filter((product) => {
-                                            const titleMatch = product.title.toLowerCase().includes(searchTerm);
-                                            const skuMatch =
-                                                product.variants &&
-                                                product.variants.some(
-                                                    (variant) =>
-                                                        variant.sku && variant.sku.toLowerCase().includes(searchTerm)
-                                                );
-                                            return titleMatch || skuMatch;
-                                        });
-                                        renderProductList(filteredProducts);
-                                    });
-
-                                    addProductBtn.addEventListener("click", () => {
-                                        selectedProductForModal = null;
+                                    productDiv.addEventListener("click", () => {
+                                        selectedProductForModal = product; // Tüm ürün objesini sakla
+                                        // Modal için _200x200 boyutunu kullanma
                                         modalProductImage.src =
-                                            "https://placehold.co/100x100/FFE4E1/FF7F50?text=Görsel";
-                                        modalProductSKU.value = "";
-                                        modalProductName.value = "";
-                                        modalProductPrice.value = "";
+                                            product.images && product.images.length > 0
+                                                ? product.images[0].src.replace(
+                                                    /(\.[^.?]+)(\?.*)?$/,
+                                                    "_200x200$1$2"
+                                                )
+                                                : `https://placehold.co/100x100/FFE4E1/FF7F50?text=${product.title.substring(
+                                                    0,
+                                                    1
+                                                )}`;
+                                        modalProductSKU.value = firstVariant.sku || "N/A";
+                                        modalProductName.value = product.title;
+                                        modalProductPrice.value = parseFloat(firstVariant.price).toFixed(2);
                                         modalProductQuantity.value = 1;
-                                        productSearchInput.value = ""; // Arama kutusunu temizle
+
                                         document
                                             .querySelectorAll(".product-select-item")
                                             .forEach((item) => item.classList.remove("selected", "bg-light"));
-
-                                        if (allProducts.length === 0) {
-                                            fetchAllShopifyProducts(); // Ürünler daha önce çekilmediyse çek
-                                        } else {
-                                            renderProductList(allProducts); // Çekilmişse direkt listele
-                                            loadingProductsP.style.display = "none";
-                                        }
-                                        addProductModal.show();
+                                        productDiv.classList.add("selected", "bg-light");
                                     });
+                                    productListContainer.appendChild(productDiv);
+                                });
+                            }
 
-                                    confirmAddProductBtn.addEventListener("click", () => {
-                                        if (!selectedProductForModal) {
-                                            alert("Lütfen bir ürün seçin.");
-                                            return;
-                                        }
+                            productSearchInput.addEventListener("input", function () {
+                                const searchTerm = this.value.toLowerCase().trim();
+                                if (!allProducts || allProducts.length === 0) return;
 
-                                        const productName = modalProductName.value;
-                                        const productSKU = modalProductSKU.value;
-                                        const unitPrice = parseFloat(modalProductPrice.value);
-                                        const quantity = parseInt(modalProductQuantity.value);
-                                        // Tablo için _60x60 boyutunu kullanma (veya uygun bir boyut)
-                                        const productImageUrl = modalProductImage.src.replace("_200x200", "_60x60");
+                                const filteredProducts = allProducts.filter((product) => {
+                                    const titleMatch = product.title.toLowerCase().includes(searchTerm);
+                                    const skuMatch =
+                                        product.variants &&
+                                        product.variants.some(
+                                            (variant) =>
+                                                variant.sku && variant.sku.toLowerCase().includes(searchTerm)
+                                        );
+                                    return titleMatch || skuMatch;
+                                });
+                                renderProductList(filteredProducts);
+                            });
 
-                                        if (isNaN(unitPrice) || unitPrice < 0 || isNaN(quantity) || quantity <= 0) {
-                                            alert(
-                                                "Lütfen geçerli bir birim fiyat (0 veya üzeri) ve adet (1 veya üzeri) girin."
-                                            );
-                                            return;
-                                        }
+                            addProductBtn.addEventListener("click", () => {
+                                selectedProductForModal = null;
+                                modalProductImage.src =
+                                    "https://placehold.co/100x100/FFE4E1/FF7F50?text=Görsel";
+                                modalProductSKU.value = "";
+                                modalProductName.value = "";
+                                modalProductPrice.value = "";
+                                modalProductQuantity.value = 1;
+                                productSearchInput.value = ""; // Arama kutusunu temizle
+                                document
+                                    .querySelectorAll(".product-select-item")
+                                    .forEach((item) => item.classList.remove("selected", "bg-light"));
 
-                                        const totalRowAmount = unitPrice * quantity;
+                                if (allProducts.length === 0) {
+                                    fetchAllShopifyProducts(); // Ürünler daha önce çekilmediyse çek
+                                } else {
+                                    renderProductList(allProducts); // Çekilmişse direkt listele
+                                    loadingProductsP.style.display = "none";
+                                }
+                                addProductModal.show();
+                            });
 
-                                        const newRow = productsTableBody.insertRow();
-                                        // Mobil görünüm için data-label eklemeleri
-                                        newRow.innerHTML = `
+                            confirmAddProductBtn.addEventListener("click", () => {
+                                if (!selectedProductForModal) {
+                                    alert("Lütfen bir ürün seçin.");
+                                    return;
+                                }
+
+                                const productName = modalProductName.value;
+                                const productSKU = modalProductSKU.value;
+                                const unitPrice = parseFloat(modalProductPrice.value);
+                                const quantity = parseInt(modalProductQuantity.value);
+                                // Tablo için _60x60 boyutunu kullanma (veya uygun bir boyut)
+                                const productImageUrl = modalProductImage.src.replace("_200x200", "_60x60");
+
+                                if (isNaN(unitPrice) || unitPrice < 0 || isNaN(quantity) || quantity <= 0) {
+                                    alert(
+                                        "Lütfen geçerli bir birim fiyat (0 veya üzeri) ve adet (1 veya üzeri) girin."
+                                    );
+                                    return;
+                                }
+
+                                const totalRowAmount = unitPrice * quantity;
+
+                                const newRow = productsTableBody.insertRow();
+                                // Mobil görünüm için data-label eklemeleri
+                                newRow.innerHTML = `
             <td data-label="Görsel"><img src="${productImageUrl}" alt="${productName}" style="width: 90px; height: 90px; object-fit: cover; border-radius: 4px;" onerror="this.onerror=null;this.src='https://placehold.co/60x60/FFE4E1/FF7F50?text=Hata';"></td>
             <td data-label="Ürün Kodu">${productSKU}</td>
             <td data-label="Ürün Adı" class="text-start">${productName}</td>
             <td data-label="Birim Fiyat (₺)"><input type="number" class="form-control form-control-sm row-unit-price" value="${unitPrice.toFixed(
-                                            2
-                                        )}" step="0.01" min="0"></td>
+                                    2
+                                )}" step="0.01" min="0"></td>
             <td data-label="Adet"><input type="number" class="form-control form-control-sm row-quantity" value="${quantity}" min="1"></td>
             <td data-label="Toplam Tutar (₺)" class="row-total-amount">${totalRowAmount.toFixed(
-                                            2
-                                        )}</td>
+                                    2
+                                )}</td>
             <td data-label="İşlem"><button class="icon-btn delete-row-btn" title="Satırı Sil"><i class="fas fa-trash-alt"></i></button></td>
         `;
-                                        // Ürün adı için mobil ve masaüstünde sola yaslama
-                                        newRow.cells[2].classList.add("text-md-center", "text-start");
+                                // Ürün adı için mobil ve masaüstünde sola yaslama
+                                newRow.cells[2].classList.add("text-md-center", "text-start");
 
-                                        updateTotals();
-                                        addProductModal.hide();
-                                        selectedProductForModal = null;
-                                    });
+                                updateTotals();
+                                addProductModal.hide();
+                                selectedProductForModal = null;
+                            });
 
-                                    productsTableBody.addEventListener("click", function (e) {
-                                        if (e.target.closest(".delete-row-btn")) {
-                                            e.target.closest("tr").remove();
-                                            updateTotals();
-                                        }
-                                    });
+                            productsTableBody.addEventListener("click", function (e) {
+                                if (e.target.closest(".delete-row-btn")) {
+                                    e.target.closest("tr").remove();
+                                    updateTotals();
+                                }
+                            });
 
-                                    productsTableBody.addEventListener("input", function (e) {
-                                        if (
-                                            e.target.classList.contains("row-unit-price") ||
-                                            e.target.classList.contains("row-quantity")
-                                        ) {
-                                            const row = e.target.closest("tr");
-                                            const unitPriceInput = row.querySelector(".row-unit-price");
-                                            const quantityInput = row.querySelector(".row-quantity");
-                                            const totalAmountCell = row.querySelector(".row-total-amount");
+                            productsTableBody.addEventListener("input", function (e) {
+                                if (
+                                    e.target.classList.contains("row-unit-price") ||
+                                    e.target.classList.contains("row-quantity")
+                                ) {
+                                    const row = e.target.closest("tr");
+                                    const unitPriceInput = row.querySelector(".row-unit-price");
+                                    const quantityInput = row.querySelector(".row-quantity");
+                                    const totalAmountCell = row.querySelector(".row-total-amount");
 
-                                            const unitPrice = parseFloat(unitPriceInput.value) || 0;
-                                            const quantity = parseInt(quantityInput.value) || 0;
+                                    const unitPrice = parseFloat(unitPriceInput.value) || 0;
+                                    const quantity = parseInt(quantityInput.value) || 0;
 
-                                            if (unitPrice < 0) unitPriceInput.value = 0;
-                                            if (quantity < 1) quantityInput.value = 1;
+                                    if (unitPrice < 0) unitPriceInput.value = 0;
+                                    if (quantity < 1) quantityInput.value = 1;
 
-                                            totalAmountCell.textContent = (
-                                                Math.max(0, unitPrice) * Math.max(1, quantity)
-                                            ).toFixed(2);
-                                            updateTotals();
-                                        }
-                                    });
+                                    totalAmountCell.textContent = (
+                                        Math.max(0, unitPrice) * Math.max(1, quantity)
+                                    ).toFixed(2);
+                                    updateTotals();
+                                }
+                            });
 
-                                    function updateTotals() {
-                                        let currentTotalQuantity = 0;
-                                        let currentTotalAmount = 0;
-                                        productsTableBody.querySelectorAll("tr").forEach((row) => {
-                                            const quantityInput = row.querySelector(".row-quantity");
-                                            const totalAmountCell = row.querySelector(".row-total-amount");
-                                            if (quantityInput) {
-                                                currentTotalQuantity += parseInt(quantityInput.value) || 0;
-                                            }
-                                            if (totalAmountCell) {
-                                                currentTotalAmount += parseFloat(totalAmountCell.textContent) || 0;
-                                            }
-                                        });
-                                        totalQuantityDisplay.textContent = currentTotalQuantity;
-                                        totalAmountDisplay.textContent = currentTotalAmount.toFixed(2);
+                            function updateTotals() {
+                                let currentTotalQuantity = 0;
+                                let currentTotalAmount = 0;
+                                productsTableBody.querySelectorAll("tr").forEach((row) => {
+                                    const quantityInput = row.querySelector(".row-quantity");
+                                    const totalAmountCell = row.querySelector(".row-total-amount");
+                                    if (quantityInput) {
+                                        currentTotalQuantity += parseInt(quantityInput.value) || 0;
                                     }
+                                    if (totalAmountCell) {
+                                        currentTotalAmount += parseFloat(totalAmountCell.textContent) || 0;
+                                    }
+                                });
+                                totalQuantityDisplay.textContent = currentTotalQuantity;
+                                totalAmountDisplay.textContent = currentTotalAmount.toFixed(2);
+                            }
 
-                                    // --- Excel ve PDF Aktarma ---
-                                    const exportExcelBtn = document.getElementById("exportExcelBtn");
-                                    const exportPdfBtn = document.getElementById("exportPdfBtn");
-                                    const excelFormatModal = new bootstrap.Modal(
-                                        document.getElementById("excelFormatModal")
-                                    );
-                                    const pdfFormatModal = new bootstrap.Modal(
-                                        document.getElementById("pdfFormatModal")
-                                    );
-                                    const confirmExcelExportBtn = document.getElementById(
-                                        "confirmExcelExportBtn"
-                                    );
-                                    const confirmPdfExportBtn = document.getElementById("confirmPdfExportBtn");
+                            // --- Excel ve PDF Aktarma ---
+                            const exportExcelBtn = document.getElementById("exportExcelBtn");
+                            const exportPdfBtn = document.getElementById("exportPdfBtn");
+                            const excelFormatModal = new bootstrap.Modal(
+                                document.getElementById("excelFormatModal")
+                            );
+                            const pdfFormatModal = new bootstrap.Modal(
+                                document.getElementById("pdfFormatModal")
+                            );
+                            const confirmExcelExportBtn = document.getElementById(
+                                "confirmExcelExportBtn"
+                            );
+                            const confirmPdfExportBtn = document.getElementById("confirmPdfExportBtn");
 
-                                    exportExcelBtn.addEventListener("click", () => excelFormatModal.show());
-                                    exportPdfBtn.addEventListener("click", () => pdfFormatModal.show());
+                            exportExcelBtn.addEventListener("click", () => excelFormatModal.show());
+                            exportPdfBtn.addEventListener("click", () => pdfFormatModal.show());
 
-                                    confirmExcelExportBtn.addEventListener("click", () => {
-                                        const format = document.getElementById("excelFormatSelect").value;
-                                        exportToExcel(format);
-                                        excelFormatModal.hide();
+                            confirmExcelExportBtn.addEventListener("click", () => {
+                                const format = document.getElementById("excelFormatSelect").value;
+                                exportToExcel(format);
+                                excelFormatModal.hide();
+                            });
+
+                            confirmPdfExportBtn.addEventListener("click", () => {
+                                const format = document.getElementById("pdfFormatSelect").value;
+                                exportToPDF(format);
+                                pdfFormatModal.hide();
+                            });
+
+                            function getTableDataForExport() {
+                                const data = [];
+                                const headers = [
+                                    "Ürün Kodu",
+                                    "Ürün Adı",
+                                    "Birim Fiyat (₺)",
+                                    "Adet",
+                                    "Toplam Tutar (₺)",
+                                ];
+                                // Excel için görsel sütunu eklenmiyor, PDF için ayrıca ele alınacak.
+                                data.push(headers);
+
+                                productsTableBody.querySelectorAll("tr").forEach((row) => {
+                                    const rowData = [
+                                        row.cells[1].textContent.trim(), // Ürün Kodu
+                                        row.cells[2].textContent.trim(), // Ürün Adı
+                                        row.cells[3].querySelector("input")
+                                            ? row.cells[3].querySelector("input").value
+                                            : row.cells[3].textContent.trim(), // Birim Fiyat
+                                        row.cells[4].querySelector("input")
+                                            ? row.cells[4].querySelector("input").value
+                                            : row.cells[4].textContent.trim(), // Adet
+                                        row.cells[5].textContent.trim(), // Toplam Tutar
+                                    ];
+                                    data.push(rowData);
+                                });
+                                return data;
+                            }
+
+                            function exportToExcel(format) {
+                                const deliveryNoVal = deliveryNoInput.value;
+                                const deliveryDateVal = deliveryDateInput.value;
+                                const companyVal =
+                                    document.getElementById("deliveryCompany").selectedOptions[0]
+                                        ?.textContent || "Belirtilmemiş";
+                                const totalQtyVal = totalQuantityDisplay.textContent;
+                                const totalAmtVal = totalAmountDisplay.textContent;
+
+                                if (format === "general") {
+                                    const tableData = getTableDataForExport();
+                                    const generalInfo = [
+                                        ["Teslimat Formu"],
+                                        [],
+                                        ["Teslimat No:", deliveryNoVal, "", "Toplam Adet:", totalQtyVal],
+                                        [
+                                            "Teslim Tarihi:",
+                                            deliveryDateVal,
+                                            "",
+                                            "Toplam Tutar (₺):",
+                                            totalAmtVal,
+                                        ],
+                                        ["Teslim Edilen Firma:", companyVal],
+                                        [],
+                                    ];
+                                    const worksheetData = generalInfo.concat(tableData);
+
+                                    const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+                                    worksheet["!cols"] = [
+                                        { wch: 20 },
+                                        { wch: 35 },
+                                        { wch: 15 },
+                                        { wch: 10 },
+                                        { wch: 15 },
+                                    ];
+                                    worksheet["!merges"] = [{ s: { r: 0, c: 0 }, e: { r: 0, c: 4 } }];
+
+                                    const workbook = XLSX.utils.book_new();
+                                    XLSX.utils.book_append_sheet(workbook, worksheet, "Teslimat Listesi");
+                                    XLSX.writeFile(workbook, `Teslimat_${deliveryNoVal}_${format}.xlsx`);
+                                } else {
+                                    alert(format + " formatı için Excel aktarımı henüz tanımlanmamıştır.");
+                                }
+                            }
+
+                            async function exportToPDF(format) {
+                                const { jsPDF } = window.jspdf;
+                                const doc = new jsPDF({
+                                    orientation: "landscape",
+                                    unit: "pt",
+                                    format: "a4",
+                                });
+
+                                const deliveryNoVal = deliveryNoInput.value;
+                                const deliveryDateVal = deliveryDateInput.value;
+                                const companyVal =
+                                    document.getElementById("deliveryCompany").selectedOptions[0]
+                                        ?.textContent || "Belirtilmemiş";
+                                const totalQtyVal = totalQuantityDisplay.textContent;
+                                const totalAmtVal = totalAmountDisplay.textContent;
+
+                                if (format === "general") {
+                                    // Başlık ve bilgiler
+                                    doc.setFontSize(18);
+                                    doc.setTextColor(60, 60, 60);
+                                    doc.text("Teslimat Formu", doc.internal.pageSize.getWidth() / 2, 60, {
+                                        align: "center",
                                     });
 
-                                    confirmPdfExportBtn.addEventListener("click", () => {
-                                        const format = document.getElementById("pdfFormatSelect").value;
-                                        exportToPDF(format);
-                                        pdfFormatModal.hide();
+                                    doc.setFontSize(10);
+                                    let yPos = 100;
+                                    const fieldSpacing = 180;
+                                    const lineHeight = 15;
+
+                                    doc.text(`Teslimat No: ${deliveryNoVal}`, 40, yPos);
+                                    doc.text(`Teslim Tarihi: ${deliveryDateVal}`, 40 + fieldSpacing, yPos);
+                                    doc.text(
+                                        `Teslim Edilen Firma: ${companyVal}`,
+                                        40 + fieldSpacing * 2 + 20,
+                                        yPos,
+                                        { maxWidth: fieldSpacing - 20 }
+                                    );
+                                    yPos += lineHeight;
+                                    doc.text(`Toplam Adet: ${totalQtyVal}`, 40, yPos);
+                                    doc.text(`Toplam Tutar (₺): ${totalAmtVal}`, 40 + fieldSpacing, yPos);
+                                    yPos += lineHeight * 2;
+
+                                    const tableRows = productsTableBody.querySelectorAll("tr");
+                                    const tableData = [];
+                                    const imagePromises = [];
+                                    const imagePlaceholders = [];
+
+                                    tableRows.forEach((row, i) => {
+                                        const imgElement = row.cells[0].querySelector("img");
+                                        const imgSrc = imgElement?.src;
+                                        const isValidImage = imgSrc && !imgSrc.includes("placehold.co");
+
+                                        if (isValidImage) {
+                                            const safeUrl = imgSrc.replace(/\.webp(\?.*)?$/, ".jpg$1");
+                                            const imgPromise = fetch(safeUrl)
+                                                .then((res) => res.blob())
+                                                .then(
+                                                    (blob) =>
+                                                        new Promise((resolve, reject) => {
+                                                            const reader = new FileReader();
+                                                            reader.onloadend = () =>
+                                                                resolve({ index: i, imageData: reader.result });
+                                                            reader.onerror = reject;
+                                                            reader.readAsDataURL(blob);
+                                                        })
+                                                )
+                                                .catch((err) => {
+                                                    console.error("Görsel alınamadı:", err);
+                                                    return { index: i, imageData: null };
+                                                });
+
+                                            imagePromises.push(imgPromise);
+                                            imagePlaceholders.push({ index: i, x: 0, y: 0 });
+                                        }
+
+                                        const rowData = [
+                                            "", // Görsel yeri
+                                            row.cells[1].textContent.trim(),
+                                            row.cells[2].textContent.trim(),
+                                            row.cells[3].querySelector("input")?.value ||
+                                            row.cells[3].textContent.trim(),
+                                            row.cells[4].querySelector("input")?.value ||
+                                            row.cells[4].textContent.trim(),
+                                            row.cells[5].textContent.trim(),
+                                        ];
+                                        tableData.push(rowData);
                                     });
 
-                                    function getTableDataForExport() {
-                                        const data = [];
-                                        const headers = [
+                                    const tableHeaders = [
+                                        [
+                                            "Görsel",
                                             "Ürün Kodu",
                                             "Ürün Adı",
                                             "Birim Fiyat (₺)",
                                             "Adet",
                                             "Toplam Tutar (₺)",
-                                        ];
-                                        // Excel için görsel sütunu eklenmiyor, PDF için ayrıca ele alınacak.
-                                        data.push(headers);
-
-                                        productsTableBody.querySelectorAll("tr").forEach((row) => {
-                                            const rowData = [
-                                                row.cells[1].textContent.trim(), // Ürün Kodu
-                                                row.cells[2].textContent.trim(), // Ürün Adı
-                                                row.cells[3].querySelector("input")
-                                                    ? row.cells[3].querySelector("input").value
-                                                    : row.cells[3].textContent.trim(), // Birim Fiyat
-                                                row.cells[4].querySelector("input")
-                                                    ? row.cells[4].querySelector("input").value
-                                                    : row.cells[4].textContent.trim(), // Adet
-                                                row.cells[5].textContent.trim(), // Toplam Tutar
-                                            ];
-                                            data.push(rowData);
-                                        });
-                                        return data;
-                                    }
-
-                                    function exportToExcel(format) {
-                                        const deliveryNoVal = deliveryNoInput.value;
-                                        const deliveryDateVal = deliveryDateInput.value;
-                                        const companyVal =
-                                            document.getElementById("deliveryCompany").selectedOptions[0]
-                                                ?.textContent || "Belirtilmemiş";
-                                        const totalQtyVal = totalQuantityDisplay.textContent;
-                                        const totalAmtVal = totalAmountDisplay.textContent;
-
-                                        if (format === "general") {
-                                            const tableData = getTableDataForExport();
-                                            const generalInfo = [
-                                                ["Teslimat Formu"],
-                                                [],
-                                                ["Teslimat No:", deliveryNoVal, "", "Toplam Adet:", totalQtyVal],
-                                                [
-                                                    "Teslim Tarihi:",
-                                                    deliveryDateVal,
-                                                    "",
-                                                    "Toplam Tutar (₺):",
-                                                    totalAmtVal,
-                                                ],
-                                                ["Teslim Edilen Firma:", companyVal],
-                                                [],
-                                            ];
-                                            const worksheetData = generalInfo.concat(tableData);
-
-                                            const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
-                                            worksheet["!cols"] = [
-                                                { wch: 20 },
-                                                { wch: 35 },
-                                                { wch: 15 },
-                                                { wch: 10 },
-                                                { wch: 15 },
-                                            ];
-                                            worksheet["!merges"] = [{ s: { r: 0, c: 0 }, e: { r: 0, c: 4 } }];
-
-                                            const workbook = XLSX.utils.book_new();
-                                            XLSX.utils.book_append_sheet(workbook, worksheet, "Teslimat Listesi");
-                                            XLSX.writeFile(workbook, `Teslimat_${deliveryNoVal}_${format}.xlsx`);
-                                        } else {
-                                            alert(format + " formatı için Excel aktarımı henüz tanımlanmamıştır.");
-                                        }
-                                    }
-
-                                    async function exportToPDF(format) {
-                                        const { jsPDF } = window.jspdf;
-                                        const doc = new jsPDF({
-                                            orientation: "landscape",
-                                            unit: "pt",
-                                            format: "a4",
-                                        });
-
-                                        const deliveryNoVal = deliveryNoInput.value;
-                                        const deliveryDateVal = deliveryDateInput.value;
-                                        const companyVal =
-                                            document.getElementById("deliveryCompany").selectedOptions[0]
-                                                ?.textContent || "Belirtilmemiş";
-                                        const totalQtyVal = totalQuantityDisplay.textContent;
-                                        const totalAmtVal = totalAmountDisplay.textContent;
-
-                                        if (format === "general") {
-                                            // Başlık ve bilgiler
-                                            doc.setFontSize(18);
-                                            doc.setTextColor(60, 60, 60);
-                                            doc.text("Teslimat Formu", doc.internal.pageSize.getWidth() / 2, 60, {
-                                                align: "center",
-                                            });
-
-                                            doc.setFontSize(10);
-                                            let yPos = 100;
-                                            const fieldSpacing = 180;
-                                            const lineHeight = 15;
-
-                                            doc.text(`Teslimat No: ${deliveryNoVal}`, 40, yPos);
-                                            doc.text(`Teslim Tarihi: ${deliveryDateVal}`, 40 + fieldSpacing, yPos);
-                                            doc.text(
-                                                `Teslim Edilen Firma: ${companyVal}`,
-                                                40 + fieldSpacing * 2 + 20,
-                                                yPos,
-                                                { maxWidth: fieldSpacing - 20 }
-                                            );
-                                            yPos += lineHeight;
-                                            doc.text(`Toplam Adet: ${totalQtyVal}`, 40, yPos);
-                                            doc.text(`Toplam Tutar (₺): ${totalAmtVal}`, 40 + fieldSpacing, yPos);
-                                            yPos += lineHeight * 2;
-
-                                            const tableRows = productsTableBody.querySelectorAll("tr");
-                                            const tableData = [];
-                                            const imagePromises = [];
-                                            const imagePlaceholders = [];
-
-                                            tableRows.forEach((row, i) => {
-                                                const imgElement = row.cells[0].querySelector("img");
-                                                const imgSrc = imgElement?.src;
-                                                const isValidImage = imgSrc && !imgSrc.includes("placehold.co");
-
-                                                if (isValidImage) {
-                                                    const safeUrl = imgSrc.replace(/\.webp(\?.*)?$/, ".jpg$1");
-                                                    const imgPromise = fetch(safeUrl)
-                                                        .then((res) => res.blob())
-                                                        .then(
-                                                            (blob) =>
-                                                                new Promise((resolve, reject) => {
-                                                                    const reader = new FileReader();
-                                                                    reader.onloadend = () =>
-                                                                        resolve({ index: i, imageData: reader.result });
-                                                                    reader.onerror = reject;
-                                                                    reader.readAsDataURL(blob);
-                                                                })
-                                                        )
-                                                        .catch((err) => {
-                                                            console.error("Görsel alınamadı:", err);
-                                                            return { index: i, imageData: null };
-                                                        });
-
-                                                    imagePromises.push(imgPromise);
-                                                    imagePlaceholders.push({ index: i, x: 0, y: 0 });
+                                        ],
+                                    ];
+                                    doc.autoTable({
+                                        startY: yPos,
+                                        head: tableHeaders,
+                                        body: tableData,
+                                        theme: "grid",
+                                        headStyles: {
+                                            fillColor: [255, 127, 80],
+                                            textColor: [255, 255, 255],
+                                            fontStyle: "bold",
+                                        },
+                                        styles: { font: "helvetica", fontSize: 9, cellPadding: 5 },
+                                        columnStyles: {
+                                            0: { cellWidth: 45, halign: "center" },
+                                            1: { cellWidth: 90 },
+                                            2: { cellWidth: "auto" },
+                                            3: { cellWidth: 70, halign: "right" },
+                                            4: { cellWidth: 45, halign: "center" },
+                                            5: { cellWidth: 70, halign: "right" },
+                                        },
+                                        didDrawCell: (data) => {
+                                            if (data.column.index === 0 && data.cell.section === "body") {
+                                                const rowIndex = data.row.index;
+                                                const placeholder = imagePlaceholders.find(
+                                                    (p) => p.index === rowIndex
+                                                );
+                                                if (placeholder) {
+                                                    placeholder.x = data.cell.x + 7.5;
+                                                    placeholder.y = data.cell.y + 7.5;
                                                 }
+                                            }
+                                        },
+                                    });
 
-                                                const rowData = [
-                                                    "", // Görsel yeri
-                                                    row.cells[1].textContent.trim(),
-                                                    row.cells[2].textContent.trim(),
-                                                    row.cells[3].querySelector("input")?.value ||
-                                                    row.cells[3].textContent.trim(),
-                                                    row.cells[4].querySelector("input")?.value ||
-                                                    row.cells[4].textContent.trim(),
-                                                    row.cells[5].textContent.trim(),
-                                                ];
-                                                tableData.push(rowData);
-                                            });
-
-                                            const tableHeaders = [
-                                                [
-                                                    "Görsel",
-                                                    "Ürün Kodu",
-                                                    "Ürün Adı",
-                                                    "Birim Fiyat (₺)",
-                                                    "Adet",
-                                                    "Toplam Tutar (₺)",
-                                                ],
-                                            ];
-                                            doc.autoTable({
-                                                startY: yPos,
-                                                head: tableHeaders,
-                                                body: tableData,
-                                                theme: "grid",
-                                                headStyles: {
-                                                    fillColor: [255, 127, 80],
-                                                    textColor: [255, 255, 255],
-                                                    fontStyle: "bold",
-                                                },
-                                                styles: { font: "helvetica", fontSize: 9, cellPadding: 5 },
-                                                columnStyles: {
-                                                    0: { cellWidth: 45, halign: "center" },
-                                                    1: { cellWidth: 90 },
-                                                    2: { cellWidth: "auto" },
-                                                    3: { cellWidth: 70, halign: "right" },
-                                                    4: { cellWidth: 45, halign: "center" },
-                                                    5: { cellWidth: 70, halign: "right" },
-                                                },
-                                                didDrawCell: (data) => {
-                                                    if (data.column.index === 0 && data.cell.section === "body") {
-                                                        const rowIndex = data.row.index;
-                                                        const placeholder = imagePlaceholders.find(
-                                                            (p) => p.index === rowIndex
+                                    if (imagePromises.length > 0) {
+                                        Promise.all(imagePromises)
+                                            .then((results) => {
+                                                results.forEach((result) => {
+                                                    if (result?.imageData) {
+                                                        const pos = imagePlaceholders.find(
+                                                            (p) => p.index === result.index
                                                         );
-                                                        if (placeholder) {
-                                                            placeholder.x = data.cell.x + 7.5;
-                                                            placeholder.y = data.cell.y + 7.5;
+                                                        if (pos) {
+                                                            try {
+                                                                doc.addImage(
+                                                                    result.imageData,
+                                                                    "JPEG",
+                                                                    pos.x,
+                                                                    pos.y,
+                                                                    30,
+                                                                    30
+                                                                );
+                                                            } catch (e) {
+                                                                console.error("Görsel PDF'e eklenemedi:", e);
+                                                            }
                                                         }
                                                     }
-                                                },
-                                            });
-
-                                            if (imagePromises.length > 0) {
-                                                Promise.all(imagePromises)
-                                                    .then((results) => {
-                                                        results.forEach((result) => {
-                                                            if (result?.imageData) {
-                                                                const pos = imagePlaceholders.find(
-                                                                    (p) => p.index === result.index
-                                                                );
-                                                                if (pos) {
-                                                                    try {
-                                                                        doc.addImage(
-                                                                            result.imageData,
-                                                                            "JPEG",
-                                                                            pos.x,
-                                                                            pos.y,
-                                                                            30,
-                                                                            30
-                                                                        );
-                                                                    } catch (e) {
-                                                                        console.error("Görsel PDF'e eklenemedi:", e);
-                                                                    }
-                                                                }
-                                                            }
-                                                        });
-                                                        doc.save(`Teslimat_${deliveryNoVal}_${format}.pdf`);
-                                                    })
-                                                    .catch((err) => {
-                                                        console.error("Görsel işleme hatası:", err);
-                                                        doc.save(`Teslimat_${deliveryNoVal}_${format}.pdf`);
-                                                    });
-                                            } else {
+                                                });
                                                 doc.save(`Teslimat_${deliveryNoVal}_${format}.pdf`);
-                                            }
-                                        } else {
-                                            alert(format + " formatı için PDF aktarımı henüz tanımlanmamıştır.");
-                                        }
+                                            })
+                                            .catch((err) => {
+                                                console.error("Görsel işleme hatası:", err);
+                                                doc.save(`Teslimat_${deliveryNoVal}_${format}.pdf`);
+                                            });
+                                    } else {
+                                        doc.save(`Teslimat_${deliveryNoVal}_${format}.pdf`);
                                     }
+                                } else {
+                                    alert(format + " formatı için PDF aktarımı henüz tanımlanmamıştır.");
+                                }
+                            }
 
-                                    // Shopify görsel URL'sinden ID çıkarma fonksiyonu
-                                    function extractImageIdFromUrl(url) {
-                                        // Örnek URL: https://cdn.shopify.com/s/files/1/0xxx/xxxx/products/image_name.jpg
-                                        const matches = url.match(/\/products\/([^\/\?]+)/);
-                                        if (matches && matches[1]) {
-                                            return matches[1].split(".")[0]; // .jpg, .png gibi uzantıları temizle
-                                        }
-                                        return null;
-                                    }
+                            // Shopify görsel URL'sinden ID çıkarma fonksiyonu
+                            function extractImageIdFromUrl(url) {
+                                // Örnek URL: https://cdn.shopify.com/s/files/1/0xxx/xxxx/products/image_name.jpg
+                                const matches = url.match(/\/products\/([^\/\?]+)/);
+                                if (matches && matches[1]) {
+                                    return matches[1].split(".")[0]; // .jpg, .png gibi uzantıları temizle
+                                }
+                                return null;
+                            }
 
-                                    // API üzerinden ürün görselini alma fonksiyonu
-                                    async function fetchProductImageViaAPI(imageId, apiToken) {
-                                        try {
-                                            // Shopify Storefront API endpoint'i
-                                            const endpoint = "/api/2023-10/graphql.json"; // Shopify GraphQL API URL'si
+                            // API üzerinden ürün görselini alma fonksiyonu
+                            async function fetchProductImageViaAPI(imageId, apiToken) {
+                                try {
+                                    // Shopify Storefront API endpoint'i
+                                    const endpoint = "/api/2023-10/graphql.json"; // Shopify GraphQL API URL'si
 
-                                            // GraphQL sorgusu
-                                            const query = `{
+                                    // GraphQL sorgusu
+                                    const query = `{
             product(id: "gid://shopify/Product/${imageId}") {
                 images(first: 1) {
                     edges {
@@ -1135,53 +1067,53 @@
             }
         }`;
 
-                                            // API isteği yapma
-                                            const response = await fetch(endpoint, {
-                                                method: "POST",
-                                                headers: {
-                                                    "Content-Type": "application/json",
-                                                    "X-Shopify-Storefront-Access-Token": apiToken,
-                                                },
-                                                body: JSON.stringify({ query }),
-                                            });
+                                    // API isteği yapma
+                                    const response = await fetch(endpoint, {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                            "X-Shopify-Storefront-Access-Token": apiToken,
+                                        },
+                                        body: JSON.stringify({ query }),
+                                    });
 
-                                            if (!response.ok) {
-                                                throw new Error(`API hatası: ${response.status}`);
-                                            }
-
-                                            const data = await response.json();
-
-                                            // API'den dönen görsel URL'si
-                                            const imageUrl = data.data.product?.images?.edges[0]?.node?.url;
-
-                                            if (!imageUrl) {
-                                                throw new Error("Görsel URL bulunamadı");
-                                            }
-
-                                            // Görseli çekip base64'e çevirme
-                                            const imgResponse = await fetch(imageUrl);
-                                            const imgBlob = await imgResponse.blob();
-
-                                            return new Promise((resolve, reject) => {
-                                                const reader = new FileReader();
-                                                reader.onloadend = () => resolve(reader.result);
-                                                reader.onerror = reject;
-                                                reader.readAsDataURL(imgBlob);
-                                            });
-                                        } catch (error) {
-                                            console.error("API üzerinden görsel alınırken hata:", error);
-                                            return null;
-                                        }
+                                    if (!response.ok) {
+                                        throw new Error(`API hatası: ${response.status}`);
                                     }
-                                });
+
+                                    const data = await response.json();
+
+                                    // API'den dönen görsel URL'si
+                                    const imageUrl = data.data.product?.images?.edges[0]?.node?.url;
+
+                                    if (!imageUrl) {
+                                        throw new Error("Görsel URL bulunamadı");
+                                    }
+
+                                    // Görseli çekip base64'e çevirme
+                                    const imgResponse = await fetch(imageUrl);
+                                    const imgBlob = await imgResponse.blob();
+
+                                    return new Promise((resolve, reject) => {
+                                        const reader = new FileReader();
+                                        reader.onloadend = () => resolve(reader.result);
+                                        reader.onerror = reject;
+                                        reader.readAsDataURL(imgBlob);
+                                    });
+                                } catch (error) {
+                                    console.error("API üzerinden görsel alınırken hata:", error);
+                                    return null;
+                                }
+                            }
+                        });
 
 
-                            </script>
+                    </script>
 
-                        </body>
+                </body>
 
-                        </html>
-                    </div>
-                </div>
-            </section>
-        </main>
+                </html>
+            </div>
+        </div>
+    </section>
+</main>
